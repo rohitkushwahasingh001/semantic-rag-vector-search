@@ -1,0 +1,19 @@
+Modern distributed systems often use horizontal scaling to handle increasing traffic. Instead of upgrading a single machine, additional service instances are added behind a load balancer.
+
+Load balancers distribute incoming requests across multiple backend instances. This prevents any single server from becoming overloaded during traffic spikes.
+
+Caching frequently requested data reduces repeated database access. Systems often use in-memory caches such as Redis to improve response times under peak demand.
+
+Autoscaling automatically launches additional service instances when traffic increases during peak load conditions.
+
+Message queues improve resilience by decoupling services. If one downstream service becomes slow, upstream services can continue pushing events into the queue.
+
+Circuit breakers prevent cascading failures in microservice architectures. When one service repeatedly fails, requests are temporarily blocked to protect the overall system.
+
+Database bottlenecks often appear during peak load. Read replicas can help distribute read-heavy traffic away from the primary database.
+
+Observability tools such as logging, tracing, and metrics help engineers detect latency spikes and understand performance bottlenecks.
+
+Rate limiting protects APIs from sudden bursts of traffic by restricting how many requests a client can send in a given time window.
+
+Fault tolerance is achieved through redundancy, retry mechanisms, and graceful degradation so that systems remain available even during partial failures.

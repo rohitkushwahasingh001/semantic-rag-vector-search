@@ -1,0 +1,56 @@
+[
+    {
+        "query": "How does the system handle peak load?",
+        "strategy_a": {
+            "top_chunks": [
+                "Autoscaling automatically launches additional service instances when traffic increases during peak load conditions.",
+                "Load balancers distribute incoming requests across multiple backend instances. This prevents any single server from becoming overloaded during traffic spikes.",
+                "Modern distributed systems often use horizontal scaling to handle increasing traffic. Instead of upgrading a single machine, additional service instances are added behind a load balancer."
+            ]
+        },
+        "strategy_b": {
+            "expanded_query": "Autoscaling automatically launches additional service instances when traffic increases during peak load.",
+            "top_chunks": [
+                "Autoscaling automatically launches additional service instances when traffic increases during peak load conditions.",
+                "Modern distributed systems often use horizontal scaling to handle increasing traffic. Instead of upgrading a single machine, additional service instances are added behind a load balancer.",
+                "Load balancers distribute incoming requests across multiple backend instances. This prevents any single server from becoming overloaded during traffic spikes."
+            ]
+        }
+    },
+    {
+        "query": "What prevents cascading failures in microservices?",
+        "strategy_a": {
+            "top_chunks": [
+                "Circuit breakers prevent cascading failures in microservice architectures. When one service repeatedly fails, requests are temporarily blocked to protect the overall system.",
+                "Fault tolerance is achieved through redundancy, retry mechanisms, and graceful degradation so that systems remain available even during partial failures.",
+                "Message queues improve resilience by decoupling services. If one downstream service becomes slow, upstream services can continue pushing events into the queue."
+            ]
+        },
+        "strategy_b": {
+            "expanded_query": "Circuit breakers temporarily block requests when services repeatedly fail to prevent cascading failures.",
+            "top_chunks": [
+                "Circuit breakers prevent cascading failures in microservice architectures. When one service repeatedly fails, requests are temporarily blocked to protect the overall system.",
+                "Fault tolerance is achieved through redundancy, retry mechanisms, and graceful degradation so that systems remain available even during partial failures.",
+                "Rate limiting protects APIs from sudden bursts of traffic by restricting how many requests a client can send in a given time window."
+            ]
+        }
+    },
+    {
+        "query": "How do asynchronous queues improve resilience?",
+        "strategy_a": {
+            "top_chunks": [
+                "Message queues improve resilience by decoupling services. If one downstream service becomes slow, upstream services can continue pushing events into the queue.",
+                "Fault tolerance is achieved through redundancy, retry mechanisms, and graceful degradation so that systems remain available even during partial failures.",
+                "Caching frequently requested data reduces repeated database access. Systems often use in-memory caches such as Redis to improve response times under peak demand."
+            ]
+        },
+        "strategy_b": {
+            "expanded_query": "Message queues decouple services so upstream systems continue working when downstream services slow down.",
+            "top_chunks": [
+                "Message queues improve resilience by decoupling services. If one downstream service becomes slow, upstream services can continue pushing events into the queue.",
+                "Modern distributed systems often use horizontal scaling to handle increasing traffic. Instead of upgrading a single machine, additional service instances are added behind a load balancer.",
+                "Load balancers distribute incoming requests across multiple backend instances. This prevents any single server from becoming overloaded during traffic spikes."
+            ]
+        }
+    }
+]
